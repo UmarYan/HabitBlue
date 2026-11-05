@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#3f7d5b"><link rel="manifest" href="manifest.json">
+<title>Loop Habit PWA</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div class="brand"><span class="mark">↻</span><div><h1>Loop</h1><small>Habit Tracker · PWA</small></div></div><button id="addBtn" class="primary">＋ Habit</button></header>
+<main>
+<section class="datebar"><button id="prevWeek" aria-label="Previous week">‹</button><div><strong id="weekLabel">This week</strong><small id="dateLabel"></small></div><button id="nextWeek" aria-label="Next week">›</button></section>
+<section id="habitList" class="habits"></section>
+<section class="empty hidden" id="empty"><div class="emptyIcon">◌</div><h2>Start with one small habit</h2><p>Make it easy to repeat. Your progress stays on this device.</p><button class="primary" id="emptyAdd">＋ Create habit</button></section>
+<section class="summary"><div><small>Habits</small><strong id="totalHabits">0</strong></div><div><small>Today</small><strong id="todayDone">0 / 0</strong></div><div><small>Average score</small><strong id="avgScore">—</strong></div></section>
+</main>
+<div id="modal" class="modal hidden"><form id="habitForm" class="dialog">
+<div class="dialogHead"><h2 id="formTitle">Create habit</h2><button type="button" id="closeModal" class="iconBtn">×</button></div>
+<label>Habit name<input id="habitName" required maxlength="70" placeholder="e.g. Read Qur'an" autocomplete="off"></label>
+<label>Repeat target <select id="frequency"><option value="7">Every day</option><option value="6">6 times per week</option><option value="5">5 times per week</option><option value="4">4 times per week</option><option value="3">3 times per week</option><option value="2">2 times per week</option><option value="1">Once per week</option></select></label>
+<label>Color <select id="habitColor"><option value="#3f7d5b">Green</option><option value="#4778c7">Blue</option><option value="#b77931">Amber</option><option value="#8a65b5">Purple</option><option value="#c05d70">Rose</option></select></label>
+<div class="formActions"><button type="button" id="cancelForm" class="secondary">Cancel</button><button class="primary" type="submit">Save habit</button></div>
+</form></div>
+<nav class="bottom"><span class="active">◷ <small>Habits</small></span><span>▦ <small>History</small></span><span>⚙ <small>Settings</small></span></nav>
+<script src="app.js"></script>
+</body></html>

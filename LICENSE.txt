@@ -1,0 +1,6 @@
+This PWA is an independently written web implementation inspired by Loop Habit Tracker.
+Loop Habit Tracker original project: https://github.com/iSoron/uhabits
+The original Loop Habit Tracker is licensed under GNU GPL v3.0. See the upstream
+repository for its copyright and complete license terms. This package includes
+an independently implemented score routine based on the publicly documented
+Loop score method; it does not include the original Android source files.
